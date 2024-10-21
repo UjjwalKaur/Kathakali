@@ -4,9 +4,10 @@ Welcome to **Kathakali**, a computer vision tool designed to accelerate your act
 
 ![Kathakali Logo](your-image-url-here)
 
-![Home](images/screenshot-home.png)
-
 ## Key Features
+
+![Home](images/screenshot-home.png)
+<p align="center"><i>Home</i></p>
 
 ### 1. **Set a Benchmark**
 Benchmark your performance by submitting a video, whether it's from a favorite movie, a YouTube monologue, or even your best take. Ensure that the subject's face is clearly visible for accurate emotion tracking.
