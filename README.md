@@ -88,9 +88,5 @@ This project is licensed under the MIT License.
 
 ---
 
-For more details on the project, feel free to explore the website or the full documentation.
-
-```vbnet
-Make sure to replace `"your-image-url-here"` with the actual URLs for your images/screenshots, and `"your-website-url-here"` with the link to your website or documentation.
-```
+To make changes or additions to the project, feel free to fork the repository.  
 
