@@ -12,20 +12,6 @@ Meet **Kathakali**, a computer vision tool designed to accelerate your acting sk
 ### 1. **Set a Benchmark**
 Benchmark your performance by submitting a video. This may be from your favorite movie, a YouTube monologue, or even YOUR OWN performance. Whatever it is, ensure that the subject's face is clearly visible for accurate emotion tracking.
 
-![Set a Benchmark!](images/screenshot-benchmark.png)
-<p align="center"><i>Set a Benchmark</i></p>
-
-#### Step 1. Upload a Video
-![Upload Video](images/screenshot-choose-file.png)
-<p align="center"><i>Upload .mp4 video</i></p>
-
-![Video Uploaded](images/screenshot-file-chosen.png)
-<p align="center"><i>Upload .mp4 video</i></p>
-
-#### Step 2. Activate Kathakali
-![Activate Kathakali](images/screenshot-activate-kathakali.png)
-<p align="center"><i>Activate Kathakali</i></p>
-
 ### 2. **Live Practice**
 Test your emotions live! Kathakali uses CNN technology to detect and label emotions as you act. Practice with this tool to improve emotional delivery and alignment with the benchmark.
 
@@ -57,10 +43,23 @@ python main.py
 
 ## How to Use
 
-### Step 1: Set a Benchmark
-- Upload a video of your selected performance.
-- Ensure the subject's face is visible for accurate emotion detection.
-- Download the audio file for the performance.
+### Setting a Benchmark
+
+![Set a Benchmark!](images/screenshot-benchmark.png)
+<p align="center"><i>Set a Benchmark</i></p>
+
+#### Step 1. Upload a Video
+![Upload Video](images/screenshot-choose-file.png)
+<p align="center"><i>Upload .mp4 video</i></p>
+
+![Video Uploaded](images/screenshot-file-chosen.png)
+<p align="center"><i>Upload .mp4 video</i></p>
+
+#### Step 2. Activate Kathakali
+![Activate Kathakali](images/screenshot-activate-kathakali.png)
+<p align="center"><i>Activate Kathakali</i></p>
+
+#### Step 3. Wait for the processing of the video to take place
 
 ### Step 2: Live Practice
 - Test your emotional expressions in real-time.
