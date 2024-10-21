@@ -1,0 +1,173 @@
+@font-face {
+    font-family: "flaticon_qampin";
+    src: url("./flaticon_qampin.ttf?37d10c63a81463e4330ffa4b2bf6f656") format("truetype"),
+url("./flaticon_qampin.woff?37d10c63a81463e4330ffa4b2bf6f656") format("woff"),
+url("./flaticon_qampin.woff2?37d10c63a81463e4330ffa4b2bf6f656") format("woff2"),
+url("./flaticon_qampin.eot?37d10c63a81463e4330ffa4b2bf6f656#iefix") format("embedded-opentype"),
+url("./flaticon_qampin.svg?37d10c63a81463e4330ffa4b2bf6f656#flaticon_qampin") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_qampin !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-cottage:before {
+    content: "\f101";
+}
+.flaticon-camping:before {
+    content: "\f102";
+}
+.flaticon-firewood:before {
+    content: "\f103";
+}
+.flaticon-hiking:before {
+    content: "\f104";
+}
+.flaticon-tent-1:before {
+    content: "\f105";
+}
+.flaticon-branch:before {
+    content: "\f106";
+}
+.flaticon-tent-2:before {
+    content: "\f107";
+}
+.flaticon-bedding:before {
+    content: "\f108";
+}
+.flaticon-cat:before {
+    content: "\f109";
+}
+.flaticon-tent-3:before {
+    content: "\f10a";
+}
+.flaticon-campfire:before {
+    content: "\f10b";
+}
+.flaticon-tent-4:before {
+    content: "\f10c";
+}
+.flaticon-sports:before {
+    content: "\f10d";
+}
+.flaticon-facebook-app-symbol:before {
+    content: "\f10e";
+}
+.flaticon-twitter:before {
+    content: "\f10f";
+}
+.flaticon-instagram:before {
+    content: "\f110";
+}
+.flaticon-linkedin:before {
+    content: "\f111";
+}
+.flaticon-tent-5:before {
+    content: "\f112";
+}
+.flaticon-cottage-1:before {
+    content: "\f113";
+}
+.flaticon-tent-6:before {
+    content: "\f114";
+}
+.flaticon-hiking-1:before {
+    content: "\f115";
+}
+.flaticon-campfire-1:before {
+    content: "\f116";
+}
+.flaticon-eco-house:before {
+    content: "\f117";
+}
+.flaticon-washing-machine:before {
+    content: "\f118";
+}
+.flaticon-quote:before {
+    content: "\f119";
+}
+.flaticon-sink:before {
+    content: "\f11a";
+}
+.flaticon-fridge:before {
+    content: "\f11b";
+}
+.flaticon-camping-gas:before {
+    content: "\f11c";
+}
+.flaticon-pot:before {
+    content: "\f11d";
+}
+.flaticon-eat:before {
+    content: "\f11e";
+}
+.flaticon-solar-energy:before {
+    content: "\f11f";
+}
+.flaticon-wc:before {
+    content: "\f120";
+}
+.flaticon-shower:before {
+    content: "\f121";
+}
+.flaticon-toilet-paper:before {
+    content: "\f122";
+}
+.flaticon-hair-dryer:before {
+    content: "\f123";
+}
+.flaticon-essential-oil:before {
+    content: "\f124";
+}
+.flaticon-blanket:before {
+    content: "\f125";
+}
+.flaticon-ac:before {
+    content: "\f126";
+}
+.flaticon-bed:before {
+    content: "\f127";
+}
+.flaticon-guitar:before {
+    content: "\f128";
+}
+.flaticon-bonfire:before {
+    content: "\f129";
+}
+.flaticon-beach-chair:before {
+    content: "\f12a";
+}
+.flaticon-bicycle:before {
+    content: "\f12b";
+}
+.flaticon-massage:before {
+    content: "\f12c";
+}
+.flaticon-camp:before {
+    content: "\f12d";
+}
+.flaticon-van:before {
+    content: "\f12e";
+}
+.flaticon-bonfire-1:before {
+    content: "\f12f";
+}
+.flaticon-draw-check-mark:before {
+    content: "\f130";
+}
+.flaticon-sea-waves:before {
+    content: "\f131";
+}
+.flaticon-hiking-2:before {
+    content: "\f132";
+}
+.flaticon-quotation:before {
+    content: "\f133";
+}

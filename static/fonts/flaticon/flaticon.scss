@@ -1,0 +1,229 @@
+$flaticon_qampin-font: "flaticon_qampin";
+
+@font-face {
+    font-family: $flaticon_qampin-font;
+    src: url("./flaticon_qampin.ttf?37d10c63a81463e4330ffa4b2bf6f656") format("truetype"),
+url("./flaticon_qampin.woff?37d10c63a81463e4330ffa4b2bf6f656") format("woff"),
+url("./flaticon_qampin.woff2?37d10c63a81463e4330ffa4b2bf6f656") format("woff2"),
+url("./flaticon_qampin.eot?37d10c63a81463e4330ffa4b2bf6f656#iefix") format("embedded-opentype"),
+url("./flaticon_qampin.svg?37d10c63a81463e4330ffa4b2bf6f656#flaticon_qampin") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_qampin !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_qampin-map: (
+    "cottage": "\f101",
+    "camping": "\f102",
+    "firewood": "\f103",
+    "hiking": "\f104",
+    "tent-1": "\f105",
+    "branch": "\f106",
+    "tent-2": "\f107",
+    "bedding": "\f108",
+    "cat": "\f109",
+    "tent-3": "\f10a",
+    "campfire": "\f10b",
+    "tent-4": "\f10c",
+    "sports": "\f10d",
+    "facebook-app-symbol": "\f10e",
+    "twitter": "\f10f",
+    "instagram": "\f110",
+    "linkedin": "\f111",
+    "tent-5": "\f112",
+    "cottage-1": "\f113",
+    "tent-6": "\f114",
+    "hiking-1": "\f115",
+    "campfire-1": "\f116",
+    "eco-house": "\f117",
+    "washing-machine": "\f118",
+    "quote": "\f119",
+    "sink": "\f11a",
+    "fridge": "\f11b",
+    "camping-gas": "\f11c",
+    "pot": "\f11d",
+    "eat": "\f11e",
+    "solar-energy": "\f11f",
+    "wc": "\f120",
+    "shower": "\f121",
+    "toilet-paper": "\f122",
+    "hair-dryer": "\f123",
+    "essential-oil": "\f124",
+    "blanket": "\f125",
+    "ac": "\f126",
+    "bed": "\f127",
+    "guitar": "\f128",
+    "bonfire": "\f129",
+    "beach-chair": "\f12a",
+    "bicycle": "\f12b",
+    "massage": "\f12c",
+    "camp": "\f12d",
+    "van": "\f12e",
+    "bonfire-1": "\f12f",
+    "draw-check-mark": "\f130",
+    "sea-waves": "\f131",
+    "hiking-2": "\f132",
+    "quotation": "\f133",
+);
+
+.flaticon-cottage:before {
+    content: map-get($flaticon_qampin-map, "cottage");
+}
+.flaticon-camping:before {
+    content: map-get($flaticon_qampin-map, "camping");
+}
+.flaticon-firewood:before {
+    content: map-get($flaticon_qampin-map, "firewood");
+}
+.flaticon-hiking:before {
+    content: map-get($flaticon_qampin-map, "hiking");
+}
+.flaticon-tent-1:before {
+    content: map-get($flaticon_qampin-map, "tent-1");
+}
+.flaticon-branch:before {
+    content: map-get($flaticon_qampin-map, "branch");
+}
+.flaticon-tent-2:before {
+    content: map-get($flaticon_qampin-map, "tent-2");
+}
+.flaticon-bedding:before {
+    content: map-get($flaticon_qampin-map, "bedding");
+}
+.flaticon-cat:before {
+    content: map-get($flaticon_qampin-map, "cat");
+}
+.flaticon-tent-3:before {
+    content: map-get($flaticon_qampin-map, "tent-3");
+}
+.flaticon-campfire:before {
+    content: map-get($flaticon_qampin-map, "campfire");
+}
+.flaticon-tent-4:before {
+    content: map-get($flaticon_qampin-map, "tent-4");
+}
+.flaticon-sports:before {
+    content: map-get($flaticon_qampin-map, "sports");
+}
+.flaticon-facebook-app-symbol:before {
+    content: map-get($flaticon_qampin-map, "facebook-app-symbol");
+}
+.flaticon-twitter:before {
+    content: map-get($flaticon_qampin-map, "twitter");
+}
+.flaticon-instagram:before {
+    content: map-get($flaticon_qampin-map, "instagram");
+}
+.flaticon-linkedin:before {
+    content: map-get($flaticon_qampin-map, "linkedin");
+}
+.flaticon-tent-5:before {
+    content: map-get($flaticon_qampin-map, "tent-5");
+}
+.flaticon-cottage-1:before {
+    content: map-get($flaticon_qampin-map, "cottage-1");
+}
+.flaticon-tent-6:before {
+    content: map-get($flaticon_qampin-map, "tent-6");
+}
+.flaticon-hiking-1:before {
+    content: map-get($flaticon_qampin-map, "hiking-1");
+}
+.flaticon-campfire-1:before {
+    content: map-get($flaticon_qampin-map, "campfire-1");
+}
+.flaticon-eco-house:before {
+    content: map-get($flaticon_qampin-map, "eco-house");
+}
+.flaticon-washing-machine:before {
+    content: map-get($flaticon_qampin-map, "washing-machine");
+}
+.flaticon-quote:before {
+    content: map-get($flaticon_qampin-map, "quote");
+}
+.flaticon-sink:before {
+    content: map-get($flaticon_qampin-map, "sink");
+}
+.flaticon-fridge:before {
+    content: map-get($flaticon_qampin-map, "fridge");
+}
+.flaticon-camping-gas:before {
+    content: map-get($flaticon_qampin-map, "camping-gas");
+}
+.flaticon-pot:before {
+    content: map-get($flaticon_qampin-map, "pot");
+}
+.flaticon-eat:before {
+    content: map-get($flaticon_qampin-map, "eat");
+}
+.flaticon-solar-energy:before {
+    content: map-get($flaticon_qampin-map, "solar-energy");
+}
+.flaticon-wc:before {
+    content: map-get($flaticon_qampin-map, "wc");
+}
+.flaticon-shower:before {
+    content: map-get($flaticon_qampin-map, "shower");
+}
+.flaticon-toilet-paper:before {
+    content: map-get($flaticon_qampin-map, "toilet-paper");
+}
+.flaticon-hair-dryer:before {
+    content: map-get($flaticon_qampin-map, "hair-dryer");
+}
+.flaticon-essential-oil:before {
+    content: map-get($flaticon_qampin-map, "essential-oil");
+}
+.flaticon-blanket:before {
+    content: map-get($flaticon_qampin-map, "blanket");
+}
+.flaticon-ac:before {
+    content: map-get($flaticon_qampin-map, "ac");
+}
+.flaticon-bed:before {
+    content: map-get($flaticon_qampin-map, "bed");
+}
+.flaticon-guitar:before {
+    content: map-get($flaticon_qampin-map, "guitar");
+}
+.flaticon-bonfire:before {
+    content: map-get($flaticon_qampin-map, "bonfire");
+}
+.flaticon-beach-chair:before {
+    content: map-get($flaticon_qampin-map, "beach-chair");
+}
+.flaticon-bicycle:before {
+    content: map-get($flaticon_qampin-map, "bicycle");
+}
+.flaticon-massage:before {
+    content: map-get($flaticon_qampin-map, "massage");
+}
+.flaticon-camp:before {
+    content: map-get($flaticon_qampin-map, "camp");
+}
+.flaticon-van:before {
+    content: map-get($flaticon_qampin-map, "van");
+}
+.flaticon-bonfire-1:before {
+    content: map-get($flaticon_qampin-map, "bonfire-1");
+}
+.flaticon-draw-check-mark:before {
+    content: map-get($flaticon_qampin-map, "draw-check-mark");
+}
+.flaticon-sea-waves:before {
+    content: map-get($flaticon_qampin-map, "sea-waves");
+}
+.flaticon-hiking-2:before {
+    content: map-get($flaticon_qampin-map, "hiking-2");
+}
+.flaticon-quotation:before {
+    content: map-get($flaticon_qampin-map, "quotation");
+}
