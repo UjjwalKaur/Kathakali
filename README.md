@@ -22,6 +22,7 @@ To get started with **Kathakali**, clone this repository:
 ```bash
 git clone https://github.com/your-username/kathakali.git
 cd kathakali
+```
 
 ## Installation
 
@@ -29,12 +30,13 @@ To install the required packages:
 
 ```bash
 pip install -r requirements.txt
-
+```
 
 To run the application:
 
 ```bash
 python main.py
+```
 
 ## How to Use
 
@@ -63,5 +65,5 @@ For more details on the project, feel free to explore the website or the full do
 
 ```vbnet
 Make sure to replace `"your-image-url-here"` with the actual URLs for your images/screenshots, and `"your-website-url-here"` with the link to your website or documentation.
-
+```
 
