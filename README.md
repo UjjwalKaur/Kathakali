@@ -23,3 +23,45 @@ To get started with **Kathakali**, clone this repository:
 git clone https://github.com/your-username/kathakali.git
 cd kathakali
 
+## Installation
+
+To install the required packages:
+
+```bash
+pip install -r requirements.txt
+
+
+To run the application:
+
+```bash
+python main.py
+
+## How to Use
+
+### Step 1: Set a Benchmark
+- Upload a video of your selected performance.
+- Ensure the subject's face is visible for accurate emotion detection.
+- Download the audio file for the performance.
+
+### Step 2: Live Practice
+- Test your emotional expressions in real-time.
+- The model will display your detected emotions as you act.
+
+### Step 3: Evaluate Your Performance
+- Upload the benchmark audio file and perform the scene.
+- Kathakali will compare your live performance with the benchmark and provide feedback.
+
+## Contributing
+Feel free to submit issues or pull requests. For major changes, please open an issue to discuss what you’d like to change.
+
+## License
+This project is licensed under the MIT License.
+
+---
+
+For more details on the project, feel free to explore the website or the full documentation.
+
+```vbnet
+Make sure to replace `"your-image-url-here"` with the actual URLs for your images/screenshots, and `"your-website-url-here"` with the link to your website or documentation.
+
+
