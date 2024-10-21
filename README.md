@@ -66,13 +66,13 @@ python main.py
 This is what the Live Practice Page will look like
 
 ![Kathakali Live](images/screenshot-black-neutral.png)
-<p align="center"><i>Happy</i></p>
+<p align="center"><i>Neutral</i></p>
 
 ![Kathakali Live](images/screenshot-black-surprised.png)
-<p align="center"><i>Upload .mp4 video</i></p>
+<p align="center"><i>Surprised</i></p>
 
 ![Kathakali Live](images/screenshot-black-happy.png)
-<p align="center"><i>Activate Kathakali</i></p>
+<p align="center"><i>Happy</i></p>
 
 ### Step 3: Evaluate Your Performance
 - Upload the benchmark audio file and perform the scene.
