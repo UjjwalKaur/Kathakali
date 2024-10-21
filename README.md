@@ -1,6 +1,6 @@
 # Kathakali - Emotion Detection for Acting Practice
 
-Welcome to **Kathakali**, a computer vision tool designed to accelerate your acting skills by analyzing your emotional performance using a CNN-based Emotion Detection Model. Whether you're perfecting a monologue or preparing for an audition, Kathakali helps you track your progress, compare it with benchmarks, and improve!
+Meet **Kathakali**, a computer vision tool designed to accelerate your acting skills by analyzing your acting performance using a CNN-based Emotion Detection Model. Kathakali helps you track your progress, compare it with benchmarks, and improve!
 
 ![Kathakali Logo](your-image-url-here)
 
@@ -10,7 +10,7 @@ Welcome to **Kathakali**, a computer vision tool designed to accelerate your act
 <p align="center"><i>Home</i></p>
 
 ### 1. **Set a Benchmark**
-Benchmark your performance by submitting a video, whether it's from a favorite movie, a YouTube monologue, or even your best take. Ensure that the subject's face is clearly visible for accurate emotion tracking.
+Benchmark your performance by submitting a video. This may be from your favorite movie, a YouTube monologue, or even YOUR OWN performance. Whatever it is, ensure that the subject's face is clearly visible for accurate emotion tracking.
 
 ![Set a Benchmark!](images/screenshot-benchmark.png)
 <p align="center"><i>Set a Benchmark</i></p>
