@@ -4,6 +4,8 @@ Welcome to **Kathakali**, a computer vision tool designed to accelerate your act
 
 ![Kathakali Logo](your-image-url-here)
 
+![Home](images/screenshot-home)
+
 ## Key Features
 
 ### 1. **Set a Benchmark**
