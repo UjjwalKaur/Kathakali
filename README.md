@@ -16,14 +16,14 @@ Benchmark your performance by submitting a video, whether it's from a favorite m
 <p align="center"><i>Set a Benchmark</i></p>
 
 #### Step 1. Upload a Video
-![Upload Video](images/screenshot-benchmark-upload-video.png)
+![Upload Video](images/screenshot-choose-file.png)
 <p align="center"><i>Upload .mp4 video</i></p>
 
-![Video Uploaded](images/screenshot-benchmark-video-uploaded.png)
+![Video Uploaded](images/screenshot-file-chosen.png)
 <p align="center"><i>Upload .mp4 video</i></p>
 
 #### Step 2. Activate Kathakali
-![Activate Kathakali](images/screenshot-benchmark-activate-kathakali.png)
+![Activate Kathakali](images/screenshot-activate-kathakali.png)
 <p align="center"><i>Activate Kathakali</i></p>
 
 ### 2. **Live Practice**
