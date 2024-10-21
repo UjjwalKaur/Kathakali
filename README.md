@@ -62,8 +62,17 @@ python main.py
 #### Step 3. Wait for the processing of the video to take place
 
 ### Step 2: Live Practice
-- Test your emotional expressions in real-time.
-- The model will display your detected emotions as you act.
+
+This is what the Live Practice Page will look like
+
+![Kathakali Live](images/screenshot-black-neutral.png)
+<p align="center"><i>Happy</i></p>
+
+![Kathakali Live](images/screenshot-black-surprised.png)
+<p align="center"><i>Upload .mp4 video</i></p>
+
+![Kathakali Live](images/screenshot-black-happy.png)
+<p align="center"><i>Activate Kathakali</i></p>
 
 ### Step 3: Evaluate Your Performance
 - Upload the benchmark audio file and perform the scene.
