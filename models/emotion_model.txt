@@ -1,0 +1,2 @@
+Link to the Emotion Detection CNN model (since it is too large for Github)
+https://drive.google.com/file/d/1pGeHOE-Ha4iusuQkY9RSyWSWfU2vMish/view?usp=drive_link
