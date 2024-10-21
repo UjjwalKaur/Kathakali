@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <!-- <link rel="icon" href="images/fevicon.png" type="image/gif" /> -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Activity</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="./static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+
+  <!-- font awesome style -->
+  <link href="./static/css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="./static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="./static/css/responsive.css" rel="stylesheet" />
+
+  <style>
+    .center_text {
+      text-align: center;
+    }
+    </style>
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section long_section px-0">
+      <nav class="navbar navbar-expand-lg custom_nav-container ">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""> </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+            <ul class="navbar-nav ">
+              <li class="nav-item ">
+                <a class="nav-link" href="{{url_for('index')}}">HOME <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('live')}}">PRACTISE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('aefv')}}">BENCHMARKING</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('comp')}}">EVALUATION</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- about section -->
+  <section class="about_section layout_padding long_section">
+    <div class="container">
+  <h1>My Score</h1>
+
+  {% if comparison %}
+      <p>The two CSV files are identical.</p>
+  {% else %}
+      <p>The two CSV files have differences.</p>
+      <h2>Differences</h2>
+      <pre>{{ differences }}</pre>
+  {% endif %}
+
+  <a href="{{ url_for('index') }}">Back to Home</a>
+  <!-- end about section -->
+  </div>
+  </section>
+  <!-- footer section -->
+  <footer class="footer_section">
+
+    <!-- info section -->
+    <section class="info_section long_section">
+  
+      <div class="container">
+        <div class="contact_nav">
+          <a href="https://github.com/UjjwalKaur" target = '_blank' rel = 'noreferrer'>
+            <i class="fa fa-github" aria-hidden="true"></i>
+            <span>
+              Stalk the developer on Github
+            </span>
+          </a>
+          <a href= 'https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqTfrFPGSSrKBpjSHPMXtmWwBMTzBPhgtzTvJgqvKLflXclrsSDMPXTzRRBZLGgBPrfWWg' target = '_blank' rel = 'noreferrer'>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span>
+            Contact the developer via Email
+            </span>
+          </a>
+          <!-- <a href="">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <span>
+              Location
+            </span>
+          </a> -->
+        </div>
+  
+        
+      </div>
+    </section>
+  
+    </footer>
+    <!-- footer section -->
+
+
+  <!-- jQery -->
+  <script src="./static/js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="./static/js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="./static/js/custom.js"></script>
+
+
+</body>
+
+</html>

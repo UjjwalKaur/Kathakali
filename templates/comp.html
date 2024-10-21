@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Activity</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="./static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+
+  <!-- font awesome style -->
+  <link href="./static/css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="./static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="./static/css/responsive.css" rel="stylesheet" />
+
+  <style>
+    .center_text {
+      text-align: center;
+    }
+    </style>
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section long_section px-0">
+      <nav class="navbar navbar-expand-lg custom_nav-container ">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""> </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+            <ul class="navbar-nav ">
+              <li class="nav-item ">
+                <a class="nav-link" href="{{url_for('index')}}">HOME <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('live')}}">PRACTISE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('aefv')}}">BENCHMARKING</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('comp')}}">EVALUATION</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!--slider section-->
+  <section class="slider_section long_section">
+    <div id="customCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container ">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="detail-box">
+                  <h1>
+                    Moment of Truth!
+                  </h1>
+                  <p>Now that you've set a benchmark and practised enough to outperform it, it's time to assess yourself against it. 
+                    Think of this as an audition and give it your best shot. Kathakali is ready when you are!</p>                  
+                  <p><b>Instructions</b>: Remember those two files you downloaded earlier when you were setting a benchmark? One of them is a .mp4 file. Upload the .mp4 file down below.</p>
+                  <p>This mp4 file is the audio extracted from your benchmark performance. 
+                    Once you click the button below, you need to start performing to the this audio file. 
+                    Kathakali will track your emotions, compare them to the benchmark you set and let you know how well you fared against it.</p>
+                  <div class="btn-box">
+                    <form id="audioForm" action="{{ url_for('upload_and_play_audio') }}" method="POST" enctype="multipart/form-data">
+                      <label for="audio_file">Select Audio File:</label>
+                      <input class="btn2" type="file" name="audio_file" id="audio_file" accept="audio/*" required><br><br>
+                      <button class = "btn1" type="submit">Start Performing</button>
+                  </form>
+                  </div>
+                  <h2>Live Video Stream</h2>
+                  <p>Once you uplaod the audio file, your live performance will be visible below</p>
+                  <img id="videoFeed" src="" alt="Live Video Feed" style="border: 1px solid black;">
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="img-box">
+                  <img src="./static/images/home_page.png" alt="">
+                </div>
+              </div>
+            </div>
+            <script>
+              document.getElementById('audioForm').addEventListener('submit', function(event) {
+                  event.preventDefault();
+          
+                  const formData = new FormData(this);
+          
+                  // Start the camera feed
+                  document.getElementById('videoFeed').src = "{{ url_for('comp_live_video') }}";
+          
+                  fetch('{{ url_for("upload_and_play_audio") }}', {
+                      method: 'POST',
+                      body: formData
+                  }).then(response => response.json())
+                    .then(data => {
+                        if (data.error) {
+                            alert(data.error);
+                        } else {
+                            const audio = new Audio(data.file_url);
+                            audio.play();
+          
+                            audio.onended = function() {
+                                // Stop the camera feed after the audio finishes and download the CSV
+                                fetch('{{ url_for("stop_video_feed") }}')
+                                  .then(response => {
+                                      if (response.ok) {
+                                          return response.blob();
+                                      } else {
+                                          throw new Error('Failed to stop video feed and download CSV');
+                                      }
+                                  })
+                                  .then(blob => {
+                                      const url = window.URL.createObjectURL(blob);
+                                      const a = document.createElement('a');
+                                      a.style.display = 'none';
+                                      a.href = url;
+                                      a.download = 'emotion_pred.csv';
+                                      document.body.appendChild(a);
+                                      a.click();
+                                      window.URL.revokeObjectURL(url);
+                                      alert('That was the end of the Practise Session. Actorator has analysed your results.');
+                                  })
+                                  .catch(error => {
+                                      console.error('Error:', error);
+                                      alert('Oops. An error occurred while stopping the camera feed.');
+                                  });
+                            };
+                        }
+                    });
+              });
+          </script>
+          </div>
+          <br><br><br>
+          <div class="container ">
+            <div class="row">
+              <div class="col-md-5">
+                 <div class="detail-box">
+                   <!-- CSV Comparison -->
+                    <h2>Results</h2>
+                    <p>To get your results, Kathakali needs to compare the csv files of your performance against those of the benchmark video. 
+                      Upload both-- the latest file you've downloaded and the second file from the previously downloaded folder.</p>
+                      <form action="{{ url_for('compare_csv') }}" method="POST" enctype="multipart/form-data">
+                        <label for="csv_file_1">Upload your performance report:</label>
+                        <input class = "btn2" type="file" name="csv_file_1" id="csv_file_1" required>
+                        <label for="csv_file_2">Upload the benchmark performance report:</label>
+                        <input class = "btn2" type="file" name="csv_file_2" id="csv_file_2" required>
+                        <button type="submit" class = "btn1">Get me my score</button>
+                      </form>
+    
+                      <br>
+                      <!-- Link to View CSV Comparison Results -->
+                      <h2>CSV Comparison Results</h2>
+                       <a href="{{ url_for('compare_csv_results') }}" class = "btn1">View Score</a>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <!-- end slider section-->
+  <!-- about section -->
+  <!--<section class="about_section layout_padding long_section">
+    <div class="container">
+      <h1>Moment of Truth!</h1>
+
+      <p>Upload the Audio you just downloaded</p>
+      <p>This is the audio that will run in the background while you practise your monologue</p>
+      <form id="audioForm" action="{{ url_for('upload_and_play_audio') }}" method="POST" enctype="multipart/form-data">
+          <label for="audio_file">Select Audio File:</label>
+          <input class="btn2" type="file" name="audio_file" id="audio_file" accept="audio/*" required><br><br>
+          <button class = "btn1" type="submit">Let the games begin!</button>
+      </form>
+      <br>
+
+      <h2>Live Video Stream</h2>
+      <h3>Once the audio file is uploaded, your live practise session will start here</h3>
+      <img id="videoFeed" src="" alt="Live Video Feed" style="border: 1px solid black;">
+
+      <script>
+        document.getElementById('audioForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            const formData = new FormData(this);
+    
+            // Start the camera feed
+            document.getElementById('videoFeed').src = "{{ url_for('comp_live_video') }}";
+    
+            fetch('{{ url_for("upload_and_play_audio") }}', {
+                method: 'POST',
+                body: formData
+            }).then(response => response.json())
+              .then(data => {
+                  if (data.error) {
+                      alert(data.error);
+                  } else {
+                      const audio = new Audio(data.file_url);
+                      audio.play();
+    
+                      audio.onended = function() {
+                          // Stop the camera feed after the audio finishes and download the CSV
+                          fetch('{{ url_for("stop_video_feed") }}')
+                            .then(response => {
+                                if (response.ok) {
+                                    return response.blob();
+                                } else {
+                                    throw new Error('Failed to stop video feed and download CSV');
+                                }
+                            })
+                            .then(blob => {
+                                const url = window.URL.createObjectURL(blob);
+                                const a = document.createElement('a');
+                                a.style.display = 'none';
+                                a.href = url;
+                                a.download = 'emotion_pred.csv';
+                                document.body.appendChild(a);
+                                a.click();
+                                window.URL.revokeObjectURL(url);
+                                alert('That was the end of the Practise Session. Actorator has analysed your results.');
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                alert('Oops. An error occurred while stopping the camera feed.');
+                            });
+                      };
+                  }
+              });
+        });
+    </script>
+
+      <br><br>
+
+      <div class="container">-->
+        <!-- CSV Comparison -->
+        <!--<h2>Get Results</h2>
+        <form action="{{ url_for('compare_csv') }}" method="POST" enctype="multipart/form-data">
+            <label for="csv_file_1">Upload your report:</label>
+            <input type="file" name="csv_file_1" id="csv_file_1" required>
+            <label for="csv_file_2">Upload the original report:</label>
+            <input type="file" name="csv_file_2" id="csv_file_2" required>
+            <button type="submit" class = "btn1">Get me my score</button>
+        </form>
+
+        <br>-->
+        <!-- Link to View CSV Comparison Results -->
+        <!--<h2>CSV Comparison Results</h2>
+        <a href="{{ url_for('compare_csv_results') }}" class = "btn1">View Comparison Results</a>
+
+      </div>
+    </div>
+  </section>-->
+  <!-- end about section -->
+
+
+  <!-- footer section -->
+  <footer class="footer_section">
+
+    <!-- info section -->
+    <section class="info_section long_section">
+
+      <div class="container">
+        <div class="contact_nav">
+          <a href="https://github.com/UjjwalKaur" target = '_blank' rel = 'noreferrer'>
+            <i class="fa fa-github" aria-hidden="true"></i>
+            <span>
+              Stalk the developer on Github
+            </span>
+          </a>
+          <a href= 'https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqTfrFPGSSrKBpjSHPMXtmWwBMTzBPhgtzTvJgqvKLflXclrsSDMPXTzRRBZLGgBPrfWWg' target = '_blank' rel = 'noreferrer'>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span>
+            Contact the developer via Email
+            </span>
+          </a>
+          <!-- <a href="">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <span>
+              Location
+            </span>
+          </a> -->
+        </div>
+  
+        
+      </div>
+    </section>
+
+  </footer>
+  <!-- footer section -->
+
+
+  <!-- jQery -->
+  <script src="./static/js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="./static/js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="./static/js/custom.js"></script>
+
+
+</body>
+
+</html>
