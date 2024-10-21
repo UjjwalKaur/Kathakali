@@ -74,6 +74,8 @@ This is what the Live Practice Page will look like
 ![Kathakali Live](images/screenshot-black-happy.png)
 <p align="center"><i>Happy</i></p>
 
+[Watch Live Demo](https://youtu.be/MxQqu6AB_us?si=-m2JipHeI7y2ljv-)
+
 ### Step 3: Evaluate Your Performance
 - Upload the benchmark audio file and perform the scene.
 - Kathakali will compare your live performance with the benchmark and provide feedback.
