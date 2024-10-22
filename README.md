@@ -2,8 +2,6 @@
 
 Meet **Kathakali**, a computer vision tool designed to accelerate your acting skills by analyzing your acting performance using a CNN-based Emotion Detection Model. Kathakali helps you track your progress, compare it with benchmarks, and improve!
 
-![Kathakali Logo](your-image-url-here)
-
 ## Key Features
 
 ![Home](images/screenshot-home.png)
